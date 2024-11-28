@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: grid;
+    align-items: center;
+    height: 100vh;
+    margin: auto;
+    background-color: rgb(27, 26, 26);
+    color:rgb(230, 234, 237);
+    font-size: 3rem; 
+}
+
+h1{
+    text-align: center;
+}
+
+p{
+    text-align: center;
+}
