@@ -1,15 +1,5 @@
-<!DOCTYPE html>
 {% extends 'layout.html' %}
-{% load static %}
 
-<html lang="en">
-<head>
-    <title>Главная</title>
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
-
-<body>
     {% block title %}
         Главная страница
     {% endblock %}
@@ -17,7 +7,3 @@
     {% block content %}
         <h1>Главная страница</h1>
     {% endblock %}
-
-    <script src="{% static 'js/script.js' %}"></script>
-</body>
-</html>
