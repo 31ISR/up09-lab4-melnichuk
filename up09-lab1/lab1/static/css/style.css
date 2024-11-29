@@ -5,10 +5,12 @@
 }
 
 body{
-    display: grid;
+    display: flex;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
     margin: auto;
+    flex-flow: column;
+
     background-color: rgb(27, 26, 26);
     color:rgb(230, 234, 237);
     font-size: 3rem; 
@@ -21,3 +23,28 @@ h1{
 p{
     text-align: center;
 }
+
+main {
+    flex-grow: 1;
+    display: grid;
+    place-content: center;
+}
+ a {
+    text-decoration: none;
+    color: #81dbb8;
+ }
+ a:hover{
+    opacity: .85;
+ }
+
+ nav {
+    width: 100vw;
+ }
+
+ ul{
+    font-size: 2rem;
+    display: grid;
+    grid-template-columns: repeat(4,auto);
+    grid-template-rows: auto;
+    list-style: none;
+ }

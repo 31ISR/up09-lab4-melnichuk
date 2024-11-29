@@ -1,5 +1,7 @@
 <!DOCTYPE html>
+{% extends 'layout.html' %}
 {% load static %}
+
 <html lang="en">
 <head>
     <title>Главная</title>
@@ -8,7 +10,13 @@
 </head>
 
 <body>
-    <h1>Главная страница</h1>
+    {% block title %}
+        Главная страница
+    {% endblock %}
+
+    {% block content %}
+        <h1>Главная страница</h1>
+    {% endblock %}
 
     <script src="{% static 'js/script.js' %}"></script>
 </body>
