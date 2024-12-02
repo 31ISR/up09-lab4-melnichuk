@@ -13,11 +13,12 @@ body{
 
     background-color: rgb(27, 26, 26);
     color:rgb(230, 234, 237);
-    font-size: 3rem; 
+    
 }
 
 h1{
     text-align: center;
+    
 }
 
 p{
@@ -39,6 +40,7 @@ main {
 
  nav {
     width: 100vw;
+    font-size: 3rem; 
  }
 
  ul{
