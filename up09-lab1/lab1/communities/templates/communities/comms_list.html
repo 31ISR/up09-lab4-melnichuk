@@ -1,10 +1,27 @@
 
- {% extends 'layout.html' %}
+{% extends 'layout.html' %}
 
 {% block title %}
     Группы
 {% endblock %}
 
 {% block content %}
+
+<section>
     <h1>Группы</h1>
+
+    {% for comm in comms %}
+    <article class="comm">
+        <h2>
+            <a href="{% url 'comms:page' slug=comm.slug %}">{{ comm.name }}</a>
+            
+        </h2>
+
+        <p class="comm_date">{{ comm.date }}</p>
+        <!-- <p class="comm_body">{{ comm.description }}</p> -->
+    </article>
+    <br>
+    {% endfor %}
+</section>
+
 {% endblock %}

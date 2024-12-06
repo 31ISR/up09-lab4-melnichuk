@@ -1,0 +1,17 @@
+{% extends 'layout.html' %} 
+
+{% block title %}
+    {{ comm.title }} 
+{% endblock %}
+
+
+{% block content %}
+
+    <section class="comm">
+        <h1>{{ comm.name }}</h1>
+        
+        <p class="comm_date">{{ comm.date }}</p>
+        <p class="comm_body">{{ comm.description }}</p>
+    </section>
+
+{% endblock %}
