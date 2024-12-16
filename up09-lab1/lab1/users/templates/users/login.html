@@ -13,6 +13,9 @@
         {{ form }}
         <br><br>
         <button class="form-submit">Отправить</button>
+        {% if request.GET.next %}
+            <input type="hidden" name="next" value="{{ request.GET.next }}" />
+        {% endif %}
     </form>
 
 {% endblock %}
