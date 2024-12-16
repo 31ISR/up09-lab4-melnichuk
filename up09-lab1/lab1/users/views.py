@@ -9,6 +9,7 @@ def register_view(req):
         form = UserCreationForm(req.POST)
         if form.is_valid():
             form.save()
+            login(req, form.save())
             return redirect("posts:list")
     else:
         form = UserCreationForm()
@@ -20,6 +21,7 @@ def login_view(req):
         form = AuthenticationForm(data=req.POST)
         if form.is_valid():
             login(req, form.get_user())
+            
             return redirect("posts:list")
     else:
         form = AuthenticationForm()
