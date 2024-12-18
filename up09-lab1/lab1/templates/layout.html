@@ -8,6 +8,47 @@
     <script src="{% static 'js/script.js' %}" defer></script>
     <title>{% block title%} Приложение Django {% endblock%}</title>
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+    <style>
+        
+        form:not(.logout){
+            width: 70vw;
+            display: grid;
+            grid-template-rows: auto;
+            gap: 10px 10px;
+
+            input, textarea{
+                background-color: #cde2d0;
+                padding: 5px 7px;
+                border: none;
+                border-radius: 2px;
+
+                &[type=file]{
+                    background-color: #687c6b;
+                    border-radius: 7px;
+                    font-weight: bold;
+                    
+                }                
+            }
+
+            label{
+                padding-left: 10px;
+                margin-top: 20px;
+            }
+
+            button{
+                justify-self: center;
+                margin-top: 20px;
+                width: 20vw;
+            }
+
+            &.form-with-validation{
+                width: 50vw;
+            }
+        }
+
+
+    </style>
 </head>
 
 <body>
@@ -24,7 +65,7 @@
             
                 <li><form class="logout" action="{% url 'users:logout' %}" method="post">
                     {% csrf_token %}
-                    <button title="User Logout">Выйти</button>
+                    <button type="submit" title="User Logout">Выйти</button>
                 </form></li>
             {% else %}
                 <li class="reg_log">
